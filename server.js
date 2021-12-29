@@ -15,4 +15,5 @@ app.get("/*", (req, res) => {
 	res.sendFile(path.join(__dirname, "front", "build", "index.html"));
 });
 
-app.listen(3001, () => console.log("Connected!"));
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => console.log("Connected!"));
